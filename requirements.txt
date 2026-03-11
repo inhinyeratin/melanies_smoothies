@@ -1,3 +1,6 @@
+#requirements.txt
+snowflake-snowpark-python
+stream-lit
 name: app_environment
 channels:
   - snowflake
