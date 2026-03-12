@@ -76,7 +76,8 @@ ingredients_list = st.multiselect(
     options=fruit_options,
     max_selections=5
 )
-
+st.text(smoothiefroot_response) #Additional line
+'''
 # --- Submit order ---
 if ingredients_list and name_on_order:
     ingredients_string = ", ".join(ingredients_list)
@@ -95,7 +96,8 @@ if ingredients_list and name_on_order:
         else:
             pass
             st.success("Your Smoothie is ordered! ✅")
-            st.text(smoothiefroot_response) #Additional line
             #st.warning("Demo mode: not connected to Snowflake. Order not saved.")
 elif ingredients_list and not name_on_order:
     st.info("Please enter the name on the Smoothie before submitting.")
+
+'''
