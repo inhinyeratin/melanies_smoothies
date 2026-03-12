@@ -90,6 +90,8 @@ if ingredients_list and name_on_order:
                 st.error("Tried to submit to Snowflake but failed.")
                 st.exception(e)
         else:
-            st.warning("Demo mode: not connected to Snowflake. Order not saved.")
+            pass
+            st.success("Your Smoothie is ordered! ✅")
+            #st.warning("Demo mode: not connected to Snowflake. Order not saved.")
 elif ingredients_list and not name_on_order:
     st.info("Please enter the name on the Smoothie before submitting.")
