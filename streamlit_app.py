@@ -16,8 +16,8 @@ st.write('The name on your Smoothie will be:', name_on_order if name_on_order el
 
 # --- Snowflake connection ---
 # Requires a [connections.snowflake] block in secrets (see below)
-cnx = st.connection("snowflake")
-session = cnx.session()
+#cnx = st.connection("snowflake")
+#session = cnx.session()
 
 # Pull fruit options from Snowflake (Snowpark DataFrame -> list)
 fruit_df_sp = (
