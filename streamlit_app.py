@@ -75,7 +75,8 @@ ingredients_list = st.multiselect(
     max_selections=5
 )
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
-st.text(smoothiefroot_response.json()) #Additional line
+#st.text(smoothiefroot_response.json()) #Additional line
+sf_df = st.dataframe(data=smoothiefroot_response.json(),use_container_widt=True)
 '''
 --- Submit order ---
 if ingredients_list and name_on_order:
