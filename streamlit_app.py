@@ -61,7 +61,7 @@ if session is not None and col is not None:
 
 # Fallback demo data when Snowflake isn't available
 if fruit_options is None:
-    st.info("Running in demo mode (Snowflake not configured).")
+    #st.info("Running in demo mode (Snowflake not configured).")
     fruit_options = [
         "Apple", "Banana", "Blueberry", "Mango",
         "Strawberry", "Pineapple", "Spinach", "Kale"
