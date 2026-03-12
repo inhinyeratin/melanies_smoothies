@@ -79,8 +79,6 @@ if ingredients_list and name_on_order:
     ingredients_string = ", ".join(ingredients_list)
     time_to_order = st.button("Submit Order")
     if time_to_order:
-        if session is not None:
-            try:
                 session.sql(
                     "INSERT INTO SMOOTHIES.PUBLIC.ORDERS(INGREDIENTS, NAME_ON_ORDER) VALUES (?, ?)",
                     params=[ingredients_string, name_on_order]
@@ -91,9 +89,5 @@ if ingredients_list and name_on_order:
                 st.error("Tried to submit to Snowflake but failed.")
                 st.exception(e)
             """    
-
-        else:
-            pass
-            #st.warning("Demo mode: not connected to Snowflake. Order not saved.") -- might use it later
 elif ingredients_list and not name_on_order:
     st.info("Please enter the name on the Smoothie before submitting.")
