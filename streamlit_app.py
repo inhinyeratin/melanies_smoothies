@@ -86,11 +86,14 @@ if ingredients_list and name_on_order:
                     params=[ingredients_string, name_on_order]
                 ).collect()
                 st.success("Your Smoothie is ordered! ✅")
+            """
             except Exception as e:
                 st.error("Tried to submit to Snowflake but failed.")
                 st.exception(e)
+            """    
+
         else:
             pass
-            #st.warning("Demo mode: not connected to Snowflake. Order not saved.")
+            #st.warning("Demo mode: not connected to Snowflake. Order not saved.") -- might use it later
 elif ingredients_list and not name_on_order:
     st.info("Please enter the name on the Smoothie before submitting.")
