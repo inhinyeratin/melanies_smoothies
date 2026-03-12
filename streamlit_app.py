@@ -7,7 +7,7 @@ import streamlit as st
 st.set_page_config(page_title="Customize Your Smoothie", page_icon="🥤")
 
 # --- App header ---
-st.title(f"Customize Your Smoothie :cup_with_straw: {st.__version__}")
+st.title(f"Customize Your Smoothie :cup_with_straw:")
 st.write("Choose the fruits you want in your custom Smoothie!")
 
 # --- Inputs ---
