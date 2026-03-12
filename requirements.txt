@@ -1,5 +1,8 @@
 # requirements.txt
+
 streamlit>=1.40
+snowflake-snowpark-python[pandas]>=1.16.0
+snowflake-connector-python>=3.10.0
 rich>=14.0
 pandas>=2.2
 numpy>=1.26
