@@ -2,7 +2,7 @@
 
 # Import python packages
 import streamlit as st
-from snowflake.snowpark.functions import col
+#from snowflake.snowpark.functions import col
 
 # --- App header ---
 st.title(f"Customize Your Smoothie :cup_with_straw: {st.__version__}")
