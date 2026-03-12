@@ -75,11 +75,14 @@ ingredients_list = st.multiselect(
 )
 
 # --- Submit order ---
+my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
+            values ('"""+ingredients_string+"""','"""+name_on_order+"""')"""
+
 if ingredients_list and name_on_order:
     ingredients_string = ", ".join(ingredients_list)
     time_to_order = st.button("Submit Order")
     if time_to_order:
-        session.sql("INSERT INTO SMOOTHIES.PUBLIC.ORDERS(INGREDIENTS, NAME_ON_ORDER) VALUES (?, ?)",params=[ingredients_string, name_on_order]).collect()
+        session.sql(my_insert_stmt).collect()
         st.success("Your Smoothie is ordered! ✅")
 elif ingredients_list and not name_on_order:
     st.info("Please enter the name on the Smoothie before submitting.")
