@@ -82,7 +82,7 @@ if ingredients_list and name_on_order:
     ingredients_string = ", ".join(ingredients_list)
     time_to_order = st.button("Submit Order")
     if time_to_order:
-        session.sql(my_insert_stmt, params=[ingredients_string, name_on_order]).collect()
+        session.sql(my_insert_stmt).collect()
         st.success("Your Smoothie is ordered! ✅")
 elif ingredients_list and not name_on_order:
     st.info("Please enter the name on the Smoothie before submitting.")
