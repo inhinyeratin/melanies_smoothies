@@ -77,7 +77,7 @@ ingredients_list = st.multiselect(
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
 st.text(smoothiefroot_response) #Additional line
 '''
-# --- Submit order ---
+--- Submit order ---
 if ingredients_list and name_on_order:
     ingredients_string = ", ".join(ingredients_list)
     time_to_order = st.button("Submit Order")
